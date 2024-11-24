@@ -15,12 +15,25 @@ struct WeatherButton : View {
     var backgroundColor : Color
     
     var body: some View {
-        Text(title)
-            .frame(width: 280, height: 50)
-            .background(backgroundColor)
-            .foregroundStyle(textColor)
-            .font(.system(size: 20, weight: .bold, design: .default))
-            .cornerRadius(8)
+        VStack(spacing: 20) {
+            Text(title)
+                .frame(width: 280, height: 50)
+                .background(backgroundColor)
+                .font(.system(size: 20, weight: .bold, design: .default))
+                .cornerRadius(8)
+            
+            Text(title)
+                .frame(width: 280, height: 50)
+                .background(backgroundColor)
+                .font(.system(size: 20, weight: .bold, design: .default))
+                .cornerRadius(8)
+        }.foregroundStyle(.white)
     }
+}
+
+
+
+#Preview {
+    WeatherButton(title: "Test", textColor: .white, backgroundColor: .blue)
 }
 
